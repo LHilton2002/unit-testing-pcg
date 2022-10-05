@@ -15,7 +15,7 @@ MonoBehaviour:
   children: []
   parents: []
   guid: 6aa38d994db33394fbc208c38c0f34f8
-  nodeGraphPosition: {x: 350, y: 0}
+  nodeGraphPosition: {x: 361.90247, y: -0.00000667572}
   hasMultipleParents: 0
   m_geometry:
     points:
@@ -69,7 +69,7 @@ MonoBehaviour:
   children: []
   parents: []
   guid: fb1e2992d47b0004191f66d3177bc3d9
-  nodeGraphPosition: {x: 0, y: 0}
+  nodeGraphPosition: {x: 17.699886, y: 0.000061035156}
   hasMultipleParents: 0
   m_geometry:
     points:
