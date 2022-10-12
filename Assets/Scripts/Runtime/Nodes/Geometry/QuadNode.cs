@@ -36,6 +36,31 @@ namespace MiniDini.Nodes
 
             m_geometry.Empty();
 
+            Point a = new();
+            a.position = editplane.up * height;
+
+            Point b = new();
+            b.position = editplane.right * height;
+
+            Point c = new();
+            c.position = editplane.down * height;
+
+            Point d = new();
+            d.position = editplane.left * height;
+
+            int index1 = m_geometry.AddPoint(a);
+            int index2 = m_geometry.AddPoint(b);
+            int index3 = m_geometry.AddPoint(c);
+            int index4 = m_geometry.AddPoint(d);
+
+            Prim p = new();
+
+            p.points.Add(index1);
+            p.points.Add(index2);
+            p.points.Add(index3);
+            p.points.Add(index4);
+
+            m_geometry.AddPrim(p);
             // here is where we construct the geometry for a quad (4 points, one primitive with FOUR indices)
             // try constructing otherwise and see if the unit tests capture the failure!
 

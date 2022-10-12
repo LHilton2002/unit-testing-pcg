@@ -14,7 +14,9 @@ namespace MiniDini
         public Vector3 point = Vector3.zero;
         public Vector3 normal = Vector3.forward;
         public Vector3 up = Vector3.up;
+        public Vector3 down = Vector3.down;
         public Vector3 right = Vector3.right;
+        public Vector3 left = Vector3.left;
     }
 
 }
