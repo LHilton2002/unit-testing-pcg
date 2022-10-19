@@ -17,9 +17,9 @@ namespace MiniDini.Nodes
         [SerializeField]
         protected float height = 10.0f;
         [SerializeField]
-        protected uint rows = 1;
+        public uint rows = 1;
         [SerializeField]
-        protected uint columns = 1;
+        public uint columns = 1;
 
 
         #region Overrides of Node
