@@ -43,15 +43,15 @@ namespace MiniDini.Nodes
             Point c = new();
             c.position = Quaternion.AngleAxis(-360.0f / 3.0f, editplane.normal) * (editplane.up * radius);
 
-            int x = m_geometry.AddPoint(a);
-            int y = m_geometry.AddPoint(b);
-            int z = m_geometry.AddPoint(c);
+            int index1 = m_geometry.AddPoint(a);
+            int index2 = m_geometry.AddPoint(b);
+            int index3 = m_geometry.AddPoint(c);
 
             Prim p = new();
 
-            p.points.Add(x);
-            p.points.Add(y);
-            p.points.Add(z);
+            p.points.Add(index1);
+            p.points.Add(index2);
+            p.points.Add(index3);
 
             m_geometry.AddPrim(p);
 
