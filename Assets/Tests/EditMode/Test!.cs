@@ -14,13 +14,13 @@ public class TriangleNodeTests
     static Geometry geom = null;
 
     static void MakeNodeAndGeometry()
-	{
+    {
         geom = null;
         trinode = null;
 
-        if(trinode == null)
+        if (trinode == null)
             trinode = (TriangleNode)ScriptableObject.CreateInstance<TriangleNode>();
-        if(geom == null)
+        if (geom == null)
             geom = trinode.GetGeometry();
     }
 
@@ -46,7 +46,7 @@ public class TriangleNodeTests
 
         Assert.NotNull(geom.points, "Geometry.points must not be null");
         // Use the Assert class to test conditions, in this case, do we have three points for the triangle?
-        Assert.AreEqual(3,geom.points.Count);
+        Assert.AreEqual(3, geom.points.Count);
     }
 
 
@@ -68,8 +68,8 @@ public class TriangleNodeTests
         Assert.NotNull(geom.prims, "Geometry.prims must not be null");
         // we need to ensure that each index in the primitive, is a valid point (i.e. lies within the points list)
         Prim pr = geom.prims[0];
-        foreach(int p in pr.points)
-		{
+        foreach (int p in pr.points)
+        {
             Assert.GreaterOrEqual(p, 0);
             Assert.LessOrEqual(p, geom.points.Count);
         }
@@ -103,7 +103,7 @@ public class TriangleNodeTests
         cumulative_angle += angle_at_c;
         //Debug.Log(angle_at_c);
 
-        Assert.AreEqual(180.0f, cumulative_angle,0.001d);
+        Assert.AreEqual(180.0f, cumulative_angle, 0.001d);
 
     }
 
@@ -127,9 +127,9 @@ public class TriangleNodeTests
         float angle_at_b = Vector3.Angle(ba, bc);
         float angle_at_c = Vector3.Angle(ca, cb);
 
-    //    Debug.Log(angle_at_a);
-    //    Debug.Log(angle_at_b);
-    //    Debug.Log(angle_at_c);
+        //    Debug.Log(angle_at_a);
+        //    Debug.Log(angle_at_b);
+        //    Debug.Log(angle_at_c);
 
         Assert.AreEqual(angle_at_a, angle_at_b, 0.001d);
         Assert.AreEqual(angle_at_b, angle_at_c, 0.001d);

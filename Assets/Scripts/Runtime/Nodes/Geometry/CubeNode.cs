@@ -26,102 +26,79 @@ namespace MiniDini.Nodes
         /// <returns>A geometry object</returns>
         public override Geometry GetGeometry()
         {
-            if (m_geometry == null)
+            // Cache the Geometry object in a local variable
+            Geometry geometry = m_geometry;
+
+            // If the Geometry object is null, create a new one
+            if (geometry == null)
             {
                 Debug.Log("CubeNode:Geometry was null in GetGeometry, so creating");
-                // create new geometry container
-                m_geometry = new Geometry();
+                geometry = new Geometry();
             }
 
-            m_geometry.Empty();
+            // Clear out any old data from the Geometry object
+            geometry.Empty();
 
-            // here is where we construct the geometry for a cube
+            // Create a new list of Prims
+            List<Prim> prims = new List<Prim>();
 
+            // Create the 8 points for the cube
+            Point a = new Point { position = editplane.up * size };
+            Point b = new Point { position = editplane.right * size };
+            Point c = new Point { position = editplane.down * size };
+            Point d = new Point { position = editplane.left * size };
+            Point e = new Point { position = editplane.normal * size + editplane.up * size };
+            Point f = new Point { position = editplane.normal * size + editplane.right * size };
+            Point g = new Point { position = editplane.normal * size + editplane.down * size };
+            Point h = new Point { position = editplane.normal * size + editplane.left * size };
 
-            Point a = new();
-            a.position = editplane.up * size;
+            // Add the 8 points to the list
+            List<Point> points = new List<Point> { a, b, c, d, e, f, g, h };
 
-            Point b = new();
-            b.position = editplane.right * size;
+            // Add the points to the Geometry object
+            for (int i = 0; i < points.Count; i++)
+            {
+                geometry.AddPoint(points[i]);
+            }
 
-            Point c = new();
-            c.position = editplane.down * size;
+            // Add the 6 Prims to the list
+            for (int i = 0; i < 6; i++)
+            {
+                Prim prim = new Prim();
+                switch (i)
+                {
+                    case 0:
+                        prim.points.AddRange(new[] { 0, 1, 2, 3 });
+                        break;
+                    case 1:
+                        prim.points.AddRange(new[] { 4, 5, 6, 7 });
+                        break;
+                    case 2:
+                        prim.points.AddRange(new[] { 0, 4, 5, 1 });
+                        break;
+                    case 3:
+                        prim.points.AddRange(new[] { 1, 5, 6, 2 });
+                        break;
+                    case 4:
+                        prim.points.AddRange(new[] { 2, 6, 7, 3 });
+                        break;
+                    case 5:
+                        prim.points.AddRange(new[] { 3, 7, 4, 0 });
+                        break;
+                }
+                prims.Add(prim);
+            }
 
-            Point d = new();
-            d.position = editplane.left * size;
+            // Add the Prims to the Geometry object
+            for (int i = 0; i < prims.Count; i++)
+            {
+                geometry.AddPrim(prims[i]);
+            }
 
-            Point e = new();
-            e.position = editplane.normal * size + editplane.up * size;
+            // Return the Geometry object
+            return geometry;
 
-            Point f = new();
-            f.position = editplane.normal * size + editplane.right * size;
-
-            Point g = new();
-            g.position = editplane.normal * size + editplane.down * size;
-
-            Point h = new();
-            h.position = editplane.normal * size + editplane.left * size;
-
-
-
-            int index1 = m_geometry.AddPoint(a);
-            int index2 = m_geometry.AddPoint(b);
-            int index3 = m_geometry.AddPoint(c);
-            int index4 = m_geometry.AddPoint(d);
-            int index5 = m_geometry.AddPoint(e);
-            int index6 = m_geometry.AddPoint(f);
-            int index7 = m_geometry.AddPoint(g);
-            int index8 = m_geometry.AddPoint(h);
-
-            Prim pa = new();
-            Prim pb = new();
-            Prim pc = new();
-            Prim pd = new();
-            Prim pe = new();
-            Prim pf = new();
-
-            pa.points.Add(index1);
-            pa.points.Add(index2);
-            pa.points.Add(index3);
-            pa.points.Add(index4);
-
-            pb.points.Add(index5);
-            pb.points.Add(index8);
-            pb.points.Add(index7);
-            pb.points.Add(index6);
-
-            pc.points.Add(index1);
-            pc.points.Add(index5);
-            pc.points.Add(index6);
-            pc.points.Add(index2);
-
-            pd.points.Add(index3);
-            pd.points.Add(index2);
-            pd.points.Add(index6);
-            pd.points.Add(index7);
-
-            pe.points.Add(index4);
-            pe.points.Add(index3);
-            pe.points.Add(index7);
-            pe.points.Add(index8);
-
-            pf.points.Add(index1);
-            pf.points.Add(index4);
-            pf.points.Add(index8);
-            pf.points.Add(index5);
-
-            m_geometry.AddPrim(pa);
-            m_geometry.AddPrim(pb);
-            m_geometry.AddPrim(pc);
-            m_geometry.AddPrim(pd);
-            m_geometry.AddPrim(pe);
-            m_geometry.AddPrim(pf);
-
-
-
-            return m_geometry;
+            #endregion
         }
-
-        #endregion
     }
 }
