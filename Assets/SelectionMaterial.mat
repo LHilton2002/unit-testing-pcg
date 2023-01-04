@@ -20,7 +20,6 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
-  - GRABPASS
   - ALWAYS
   m_LockedProperties: 
   m_SavedProperties:

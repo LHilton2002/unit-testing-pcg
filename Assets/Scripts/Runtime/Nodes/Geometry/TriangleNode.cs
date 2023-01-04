@@ -11,7 +11,7 @@ namespace MiniDini.Nodes
     [System.Serializable]
     public class TriangleNode : Node
     {
-        [SerializeField] 
+        [SerializeField]
         protected ConstructionPlane editplane = new ConstructionPlane();
         [SerializeField]
         protected float radius = 2.0f;
@@ -20,7 +20,7 @@ namespace MiniDini.Nodes
         #region Overrides of Node
 
         public override string GetDescription() { return "A single Triangle"; }
-        
+
         /// <summary>
         /// Get the geometry for this Node.
         /// </summary>
@@ -28,7 +28,7 @@ namespace MiniDini.Nodes
         public override Geometry GetGeometry()
         {
             if (m_geometry == null)
-			{
+            {
                 Debug.Log("TriangleNode:Geometry was null in GetGeometry, so creating");
                 // create new geometry container
                 m_geometry = new Geometry();
