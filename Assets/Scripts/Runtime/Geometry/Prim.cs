@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,8 @@ namespace MiniDini
         public List<int> points = new List<int>();
         public Vector3 normal;
         public bool selected = false;
-
+        public List<int> point_indices;
+        public int index { get; set; }
 
         // default constructor
         public Prim()
@@ -42,6 +44,12 @@ namespace MiniDini
             p.points = points;
             p.selected = selected;
             return p;
+        }
+
+        public bool ContainsPoint(Point p)
+        {
+            // Replace this with the code to check if the point p is contained in the prim
+            return false;
         }
     }
 

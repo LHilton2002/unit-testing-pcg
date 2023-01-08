@@ -15,7 +15,7 @@ namespace MiniDini
 		public Vector2 uv1 = Vector2.zero;
 		public Vector2 uv2 = Vector2.zero;
 		public Color col = Color.gray;
-		public bool selected = false;
+		public bool selected;
 
 
 		public Point()
