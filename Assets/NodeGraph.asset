@@ -123,7 +123,7 @@ MonoBehaviour:
   - {fileID: 4915442188883749752}
   parents: []
   guid: 8ded18df3433cfa4ca643de5ffb347d7
-  nodeGraphPosition: {x: -57, y: 264.99997}
+  nodeGraphPosition: {x: -59.313107, y: 216.14815}
   hasMultipleParents: 0
   m_geometry:
     points:
@@ -132,97 +132,97 @@ MonoBehaviour:
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 0, y: 2, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 0, y: 4, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 0, y: 0, z: 0}
+      selected: 0
+    - position: {x: 0, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 2, y: 0, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 2, y: 2, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 2, y: 4, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 2, y: 0, z: 0}
+      selected: 0
+    - position: {x: 2, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 4, y: 0, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 4, y: 2, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 4, y: 4, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 4, y: 0, z: 0}
+      selected: 0
+    - position: {x: 4, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 6, y: 0, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 6, y: 2, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     - position: {x: 6, y: 4, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 6, y: 0, z: 0}
+      selected: 0
+    - position: {x: 6, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
+      selected: 0
     prims:
     - points: 00000000010000000500000004000000
       normal: {x: 0, y: 0, z: 0}
@@ -343,20 +343,20 @@ MonoBehaviour:
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 0
+      selected: 1
     - position: {x: 0, y: 2, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 0
+      selected: 1
     - position: {x: 0, y: 4, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       selected: 0
-    - position: {x: 0, y: 0, z: 0}
+    - position: {x: 0, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
@@ -367,20 +367,20 @@ MonoBehaviour:
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 0
+      selected: 1
     - position: {x: 2, y: 2, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 0
+      selected: 1
     - position: {x: 2, y: 4, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       selected: 0
-    - position: {x: 2, y: 0, z: 0}
+    - position: {x: 2, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       selected: 0
-    - position: {x: 4, y: 0, z: 0}
+    - position: {x: 4, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
@@ -428,7 +428,7 @@ MonoBehaviour:
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       selected: 0
-    - position: {x: 6, y: 0, z: 0}
+    - position: {x: 6, y: 6, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
@@ -446,18 +446,6 @@ MonoBehaviour:
       uv2: {x: 0, y: 0}
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       selected: 1
-    - position: {x: 0, y: 4, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 0, y: 0, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
     - position: {x: 2, y: 0, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
@@ -465,66 +453,6 @@ MonoBehaviour:
       col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       selected: 1
     - position: {x: 2, y: 2, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 2, y: 4, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 2, y: 0, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 4, y: 0, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 4, y: 2, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 4, y: 4, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 4, y: 0, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 6, y: 0, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 6, y: 2, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 6, y: 4, z: 0}
-      normal: {x: 0, y: 1, z: 0}
-      uv1: {x: 0, y: 0}
-      uv2: {x: 0, y: 0}
-      col: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      selected: 1
-    - position: {x: 6, y: 0, z: 0}
       normal: {x: 0, y: 1, z: 0}
       uv1: {x: 0, y: 0}
       uv2: {x: 0, y: 0}
@@ -533,41 +461,77 @@ MonoBehaviour:
     prims:
     - points: 00000000010000000500000004000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 01000000020000000600000005000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 02000000030000000700000006000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 04000000050000000900000008000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 05000000060000000a00000009000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 06000000070000000b0000000a000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 08000000090000000d0000000c000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 090000000a0000000e0000000d000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
       point_indices: 
     - points: 0a0000000b0000000f0000000e000000
       normal: {x: 0, y: 0, z: 0}
-      selected: 0
+      selected: 1
+      point_indices: 
+    - points: 00000000010000000500000004000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 01000000020000000600000005000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 02000000030000000700000006000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 04000000050000000900000008000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 05000000060000000a00000009000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 06000000070000000b0000000a000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 08000000090000000d0000000c000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 090000000a0000000e0000000d000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
+      point_indices: 
+    - points: 0a0000000b0000000f0000000e000000
+      normal: {x: 0, y: 0, z: 0}
+      selected: 1
       point_indices: 
   point: {x: 1, y: 1, z: 1}
-  radius: 6.07
+  radius: 2.4
   selmode: 0
-  seltype: 1
+  seltype: 2

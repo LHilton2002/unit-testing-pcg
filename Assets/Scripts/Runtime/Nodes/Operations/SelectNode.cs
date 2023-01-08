@@ -73,26 +73,39 @@ namespace MiniDini.Nodes
                 // make a copy of first parents geometry (we should only have one parent!)
                 m_geometry.Copy(parent_geometry);
 
-
-
-
-
-                // Iterate through the points in the parent geometry
-                foreach (Point p in parent_geometry.points)
+                if (selmode == SelectionMode.Inside && seltype == SelectionType.PointsOnly)
                 {
-                    bool inside = Vector3.Distance(p.position, point) <= radius;
-                    if ((selmode == SelectionMode.Inside && inside) || (selmode == SelectionMode.Outside && !inside))
+                    foreach (Point p in m_geometry.points)
                     {
-                        p.selected = true;
-                        // If we are selecting points and prims, or prims only, we also need to select the prims that contain the selected point
-                        if (seltype == SelectionType.PointsAndPrims || seltype == SelectionType.PrimsOnly)
+                        bool inside = Vector3.Distance(p.position, point) <= radius;
+                        if (inside) // (selmode == SelectionMode.Outside && !inside)
                         {
-                            foreach (Prim prim in parent_geometry.prims)
+                            p.selected = true;
+                            // If we are selecting points and prims, or prims only, we also need to select the prims that contain the selected point
+                        }
+                    }
+                }
+                else if (selmode == SelectionMode.Outside && seltype == SelectionType.PointsOnly)
+                {
+                    foreach(Point p in m_geometry.points)
+                    {
+                        bool outside = Vector3.Distance(p.position, point) > radius;
+                        if (outside) p.selected = true;
+                    }
+                    
+                }
+
+                    // Iterate through the points in the parent geometry
+                if ((seltype == SelectionType.PointsAndPrims || seltype == SelectionType.PrimsOnly) && selmode == SelectionMode.Inside)
+                {
+                    foreach (Prim prim in m_geometry.prims)
+                    {
+                        foreach (int p in prim.points)
+                        {
+                            bool primInside = Vector3.Distance(m_geometry.points[p].position, point) <= radius;
+                            if (primInside)
                             {
-                                if (prim.ContainsPoint(p))
-                                {
-                                    prim.selected = true;
-                                }
+                                prim.selected = true;
                             }
                         }
                     }
@@ -100,38 +113,31 @@ namespace MiniDini.Nodes
 
 
 
-
                 // If we are selecting prims only, we need to iterate through the prims and select them if they are inside or outside the sphere
-                if (seltype == SelectionType.PrimsOnly)
+
+                else if ((seltype == SelectionType.PointsAndPrims || seltype == SelectionType.PrimsOnly) && selmode == SelectionMode.Outside)
                 {
-                    foreach (Prim p in parent_geometry.prims)
+
+                    foreach (Prim prim in m_geometry.prims)
                     {
-                        bool inside = false;
-                        // Check if any of the points of the prim are inside the sphere
-                        foreach (Point pt in parent_geometry.points)
+                        foreach (int p in prim.points)
                         {
-                            if (Vector3.Distance(pt.position, point) <= radius)
+                            bool primInside = Vector3.Distance(m_geometry.points[p].position, point) <= radius;
+                            if (primInside)
                             {
-                                inside = true;
-                                break;
+                                prim.selected = false;
                             }
                         }
-                        if ((selmode == SelectionMode.Inside && inside) || (selmode == SelectionMode.Outside && !inside))
-                        {
-                            p.selected = true;
-                        }
                     }
+
                 }
 
 
 
 
                 // Copy the modified points and prims from the parent geometry to the node's geometry
-                m_geometry.points.AddRange(parent_geometry.points.FindAll(p => p.selected));
-                m_geometry.prims.AddRange(parent_geometry.prims.FindAll(p => p.selected));
-
-
-
+                //m_geometry.points.AddRange(m_geometry.points.FindAll(p => p.selected));
+                //m_geometry.prims.AddRange(m_geometry.prims.FindAll(p => p.selected));
             }
 
             return m_geometry;

@@ -49,7 +49,7 @@ namespace MiniDini.Nodes
                 for (int j = 0; j < columns + 1; j++)
                 {
                     Point a = new();
-                    if (j % columns == 0)
+                    if (j == 0)
                     {
                         a.position = editplane.right * width * i;
                     }
@@ -57,6 +57,7 @@ namespace MiniDini.Nodes
                     {
                         a.position = (editplane.up * height * j) + (editplane.right * width * i);
                     }
+                    Debug.Log(a.position);
                     int index1 = m_geometry.AddPoint(a);
                     indexs.Add(index1);
                 }
