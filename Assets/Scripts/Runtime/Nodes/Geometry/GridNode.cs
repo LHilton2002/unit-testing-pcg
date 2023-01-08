@@ -12,9 +12,9 @@ namespace MiniDini.Nodes
         [SerializeField]
         public ConstructionPlane editplane = new ConstructionPlane();
         [SerializeField]
-        public float width = 10f;
+        public float width = 2f;
         [SerializeField]
-        public float height = 10f;
+        public float height = 2f;
         [SerializeField]
         public uint rows = 1;
         [SerializeField]

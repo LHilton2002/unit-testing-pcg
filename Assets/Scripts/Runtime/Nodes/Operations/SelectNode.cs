@@ -73,7 +73,7 @@ namespace MiniDini.Nodes
                 // make a copy of first parents geometry (we should only have one parent!)
                 m_geometry.Copy(parent_geometry);
 
-                if (selmode == SelectionMode.Inside && seltype == SelectionType.PointsOnly)
+                if (selmode == SelectionMode.Inside)
                 {
                     foreach (Point p in m_geometry.points)
                     {
@@ -84,20 +84,6 @@ namespace MiniDini.Nodes
                             // If we are selecting points and prims, or prims only, we also need to select the prims that contain the selected point
                         }
                     }
-                }
-                else if (selmode == SelectionMode.Outside && seltype == SelectionType.PointsOnly)
-                {
-                    foreach(Point p in m_geometry.points)
-                    {
-                        bool outside = Vector3.Distance(p.position, point) > radius;
-                        if (outside) p.selected = true;
-                    }
-                    
-                }
-
-                    // Iterate through the points in the parent geometry
-                if ((seltype == SelectionType.PointsAndPrims || seltype == SelectionType.PrimsOnly) && selmode == SelectionMode.Inside)
-                {
                     foreach (Prim prim in m_geometry.prims)
                     {
                         foreach (int p in prim.points)
@@ -110,16 +96,16 @@ namespace MiniDini.Nodes
                         }
                     }
                 }
-
-
-
-                // If we are selecting prims only, we need to iterate through the prims and select them if they are inside or outside the sphere
-
-                else if ((seltype == SelectionType.PointsAndPrims || seltype == SelectionType.PrimsOnly) && selmode == SelectionMode.Outside)
+                else if (selmode == SelectionMode.Outside)
                 {
-
+                    foreach(Point p in m_geometry.points)
+                    {
+                        bool outside = Vector3.Distance(p.position, point) > radius;
+                        if (outside) p.selected = true;
+                    }
                     foreach (Prim prim in m_geometry.prims)
                     {
+                        prim.selected = true;
                         foreach (int p in prim.points)
                         {
                             bool primInside = Vector3.Distance(m_geometry.points[p].position, point) <= radius;
@@ -129,8 +115,15 @@ namespace MiniDini.Nodes
                             }
                         }
                     }
-
                 }
+
+                    // Iterate through the points in the parent geometry
+                
+
+
+
+                // If we are selecting prims only, we need to iterate through the prims and select them if they are inside or outside the sphere
+
 
 
 
