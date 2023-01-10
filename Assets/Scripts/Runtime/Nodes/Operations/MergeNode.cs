@@ -33,6 +33,16 @@ namespace MiniDini.Nodes
 
             // here is where we construct the geometry 
 
+            foreach (Node p in parents)
+            {
+                Geometry pGeometry = p.GetGeometry();
+                if (pGeometry != null)
+                {
+                    m_geometry.points.AddRange(pGeometry.points);
+                    m_geometry.prims.AddRange(pGeometry.prims);
+                }
+            }
+
 
             return m_geometry;
         }
