@@ -123,7 +123,8 @@ public class TransformNodeTests
             float y = geom.points[i].position.y;
             // what a palaver! rotation floating point innacuracy means that we need to test this way.. erk!
             Assert.True( ((y >= -0.01f)&&(y <= 0.01f)) , "Geometry points should be rotated to lie on Y plane");
-        }
+
+            }
     }
 
 
