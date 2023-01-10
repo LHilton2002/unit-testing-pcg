@@ -71,11 +71,30 @@ namespace MiniDini.Nodes
                 m_geometry.Copy(parent_geometry);
 
                 // do some simple maths to select points/prims here!
+                if (seltype == SelectionType.PrimsOnly)
+                {
+                    for (int i = 0; i < m_geometry.prims.Count; i++)
+                    {
+                        if (i >= range_start && i <= range_end && (i - range_start) % step == 0)
+                        {
+                            m_geometry.prims[i].selected = true;
+                        }
+                    }
+                }
+                else if (seltype == SelectionType.PointsOnly)
+                {
+                    for (int i = 0; i < m_geometry.points.Count; i++)
+                    {
+                        if (i >= range_start && i <= range_end && (i - range_start) % step == 0)
+                        {
+                            m_geometry.points[i].selected = true;
+                        }
+                    }
+                }
             }
 
             return m_geometry;
         }
-
 
         #endregion
     }

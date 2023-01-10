@@ -15,7 +15,6 @@ namespace MiniDini
 		public List<Point> points = new List<Point>();
 		public List<Prim> prims = new List<Prim>();
 
-
 		public Geometry()
 		{
 			points.Clear();
